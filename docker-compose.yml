@@ -1,0 +1,8 @@
+version: "3.9"
+services:
+  events-etl:
+    build: .
+    env_file: .env
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped
