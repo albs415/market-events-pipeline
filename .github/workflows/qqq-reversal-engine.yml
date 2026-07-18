@@ -1,0 +1,21 @@
+name: QQQ Reversal Engine CI
+
+on:
+  push:
+    paths:
+      - "qqq-reversal-engine/**"
+      - ".github/workflows/qqq-reversal-engine.yml"
+  pull_request:
+    paths:
+      - "qqq-reversal-engine/**"
+      - ".github/workflows/qqq-reversal-engine.yml"
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  test-build-publish:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
