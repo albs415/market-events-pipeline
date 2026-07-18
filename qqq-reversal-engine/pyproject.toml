@@ -1,0 +1,30 @@
+[project]
+name = "qqq-reversal-engine"
+version = "0.1.0"
+description = "Real-time QQQ reversal probability and magnitude engine"
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi>=0.115",
+  "uvicorn[standard]>=0.30",
+  "pydantic>=2.8",
+  "pydantic-settings>=2.4",
+  "numpy>=2.0",
+  "pandas>=2.2",
+  "scipy>=1.14",
+  "scikit-learn>=1.5",
+  "httpx>=0.27",
+  "websockets>=13",
+  "jinja2>=3.1",
+  "python-multipart>=0.0.9",
+  "orjson>=3.10",
+  "joblib>=1.4",
+  "pytest>=8.3",
+  "pytest-asyncio>=0.24",
+]
+
+[project.optional-dependencies]
+live = ["databento>=0.38"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+asyncio_mode = "auto"
