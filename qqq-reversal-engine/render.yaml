@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: qqq-reversal-engine
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /healthz
+    autoDeploy: true
+    envVars:
+      - key: DATA_MODE
+        value: simulation
+      - key: APP_ENV
+        value: production
